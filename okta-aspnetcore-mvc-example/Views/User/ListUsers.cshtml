@@ -1,0 +1,27 @@
+@model IEnumerable<Okta.Sdk.IUser>
+
+@{
+    ViewBag.Title = "List Users";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table" id="tblPersons">
+    <thead>
+        <tr>
+            <th scope="col">Username</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last name </th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var user in Model)
+    {
+        <tr>
+            <td> @user.Profile.Email </td>
+            <td> @user.Profile.FirstName </td>
+            <td> @user.Profile.LastName </td>
+        </tr>
+    }
+    </tbody>
+</table>

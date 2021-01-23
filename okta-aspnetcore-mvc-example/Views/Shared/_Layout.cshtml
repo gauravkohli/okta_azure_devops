@@ -24,6 +24,7 @@
                                 <p class="navbar-text">Hello, @User.Identity.Name</p>
                             </li>
                             <li><a class="nav-link" asp-controller="Home" asp-action="Profile" id="profile-button">Profile</a></li>
+                            <li><a class="nav-link" asp-controller="User" asp-action="ListUsers" id="list-users-button">List Users</a></li>  
                             <li>
                                 <form class="form-inline" asp-controller="Account" asp-action="SignOut" method="post">
                                     <button type="submit" class="nav-link btn btn-link text-dark" id="logout-button" id="profile-button">Sign Out</button>
